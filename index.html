@@ -52,7 +52,6 @@
     justify-content: center;
   }
 
-  /* The "Water Drop" radial expansion effect */
   .nav-cta::before, .btn-primary::before, .cta-form button::before {
     content: '';
     position: absolute;
@@ -104,11 +103,19 @@
 
   /* HERO */
   .hero {
-    padding: 8rem 6vw 6rem;
+    padding: 5rem 6vw 6rem; /* REDUCED TOP PADDING from 8rem to 5rem */
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
   }
+  
+  /* MOBILE HERO ADJUSTMENT */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 6vw 4rem; /* FURTHER REDUCED FOR MOBILE */
+    }
+  }
+
   .hero-tag {
     display: inline-flex;
     align-items: center;
