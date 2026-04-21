@@ -103,16 +103,15 @@
 
   /* HERO */
   .hero {
-    padding: 5rem 6vw 6rem; /* REDUCED TOP PADDING from 8rem to 5rem */
+    padding: 5rem 6vw 6rem;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
   }
   
-  /* MOBILE HERO ADJUSTMENT */
   @media (max-width: 768px) {
     .hero {
-      padding: 3rem 6vw 4rem; /* FURTHER REDUCED FOR MOBILE */
+      padding: 3rem 6vw 4rem;
     }
   }
 
@@ -304,18 +303,40 @@
 
   /* GUARANTEES */
   .guarantees { background: var(--white); }
-  .g-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .g-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
   .g-card {
-    padding: 2rem;
-    border: 1px solid var(--border);
+    background: var(--black);
     border-radius: 24px;
-    background: var(--white);
-    border-left: 4px solid var(--accent);
-    transition: all .3s ease;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: transform .3s ease;
   }
-  .g-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-  .g-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
-  .g-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+  .g-card:hover { transform: translateY(-4px); }
+  .g-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    background: rgba(0, 194, 255, 0.12);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .g-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .g-badge {
+    display: inline-block;
+    background: rgba(0, 194, 255, 0.12);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .g-divider { height: 1px; background: rgba(252,251,249,0.07); }
+  .g-card h3 { font-size: 16px; font-weight: 600; color: var(--white); line-height: 1.3; margin: 0; }
+  .g-card p { font-size: 14px; color: rgba(252,251,249,0.5); line-height: 1.7; margin: 0; }
 
   /* URGENCY BAR */
   .urgency-bar {
@@ -385,7 +406,7 @@
   <h1 class="reveal">Your business website.<br><em>Live in 7 days.</em><br>Or you don't pay.</h1>
   <p class="hero-sub reveal">We build professional websites for entrepreneurs who want to look credible, attract clients, and start making money online — without touching a single line of code.</p>
   <div class="hero-actions reveal">
-    <a href="#get-started" class="btn-primary">Get my website for ₹7,000 →</a>
+    <a href="#get-started" class="btn-primary">Get my website for ₹10,000 →</a>
     <span class="hero-proof">No tech skills needed. Fully done for you.</span>
   </div>
 </section>
@@ -443,7 +464,7 @@
           <strong>5-page custom website</strong>
           <span>Home, About, Services, Contact + 1 custom page. Mobile-first and built to convert.</span>
         </div>
-        <div class="value-price">₹4,000</div>
+        <div class="value-price">₹6,000</div>
       </div>
       <div class="value-row reveal">
         <div class="value-num">02</div>
@@ -451,7 +472,7 @@
           <strong>1 Year Hosting + Domain</strong>
           <span>Premium high-speed hosting and a professional .com or .in domain registration for a full year.</span>
         </div>
-        <div class="value-price">₹3,000</div>
+        <div class="value-price">₹4,000</div>
       </div>
       <div class="value-row reveal">
         <div class="value-num">03</div>
@@ -459,7 +480,7 @@
           <strong>SEO setup + Google indexing</strong>
           <span>Meta tags, sitemap, and Search Console submission for maximum visibility.</span>
         </div>
-        <div class="value-price">₹2,000</div>
+        <div class="value-price">₹3,000</div>
       </div>
       <div class="value-row reveal">
         <div class="value-num">04</div>
@@ -467,7 +488,7 @@
           <strong>Lead Capture System</strong>
           <span>Custom contact forms and WhatsApp integration for instant lead flow.</span>
         </div>
-        <div class="value-price">₹1,000</div>
+        <div class="value-price">₹2,000</div>
       </div>
       <div class="value-row reveal">
         <div class="value-num">05</div>
@@ -475,7 +496,7 @@
           <strong>30 days of priority edits</strong>
           <span>Updates to pricing or services handled by us for free for the first month.</span>
         </div>
-        <div class="value-price">₹1,500</div>
+        <div class="value-price">₹2,000</div>
       </div>
       <div class="value-row reveal">
         <div class="value-num">06</div>
@@ -483,19 +504,19 @@
           <strong>Speed & Security Suite</strong>
           <span>SSL certificate, image compression, and performance tuning for instant loading.</span>
         </div>
-        <div class="value-price">₹1,500</div>
+        <div class="value-price">₹1,000</div>
       </div>
     </div>
     <div class="value-total reveal">
       <div>
         <div class="total-label">Total value</div>
-        <div class="total-strike">₹13,000</div>
+        <div class="total-strike">₹18,000</div>
       </div>
       <div>
         <div class="total-label">Your investment</div>
-        <div class="total-price">₹7,000 <sub>one-time</sub></div>
+        <div class="total-price">₹10,000 <sub>one-time</sub></div>
       </div>
-      <div class="savings-badge">Save ₹6,000</div>
+      <div class="savings-badge">Save ₹8,000</div>
     </div>
   </div>
 </section>
@@ -506,14 +527,29 @@
     <h2 class="reveal">Our iron-clad promises.</h2>
     <div class="g-grid">
       <div class="g-card reveal">
+        <div class="g-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="g-badge">Delivery</div>
+        <div class="g-divider"></div>
         <h3>7-day delivery guarantee</h3>
         <p>Your website is live within 7 days of kickoff — or we refund every rupee. No negotiations.</p>
       </div>
       <div class="g-card reveal">
+        <div class="g-icon">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <div class="g-badge">Revisions</div>
+        <div class="g-divider"></div>
         <h3>Unlimited revision guarantee</h3>
         <p>Don't love the first draft? We revise until you do. Unlimited rounds in the first 7 days.</p>
       </div>
       <div class="g-card reveal">
+        <div class="g-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="g-badge">Ownership</div>
+        <div class="g-divider"></div>
         <h3>100% ownership guarantee</h3>
         <p>The website is yours. Full handover of all files and passwords on delivery. No lock-in.</p>
       </div>
@@ -522,7 +558,7 @@
 </section>
 
 <div class="urgency-bar">
-  ⚡ Price increases to ₹9,000 after 48 hours. Only 3 spots available this week.
+  ⚡ Price increases to ₹12,000 after 48 hours. Only 3 spots available this week.
 </div>
 
 <section class="cta-section" id="get-started">
@@ -534,7 +570,7 @@
     <input type="text" name="name" placeholder="Your name" required>
     <input type="text" name="business" placeholder="Business name" required>
     <input type="tel" name="whatsapp" placeholder="WhatsApp number" required>
-    <button type="submit" id="submit-btn">Claim my spot — ₹7,000 →</button>
+    <button type="submit" id="submit-btn">Claim my spot — ₹10,000 →</button>
   </form>
   
   <p class="cta-note reveal">No payment now. We'll confirm details first and invoice you after kickoff.</p>
